@@ -1,6 +1,10 @@
+import { useRef } from "react";
 import { Card, CardContent } from "./card";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 export default function ProjectsSection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useScrollAnimation(ref, { threshold: 0.2 });
   const projects = [
     {
       title: "Education Infrastructure",
@@ -47,9 +51,9 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">Our Projects</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Comprehensive development initiatives across Senegal, creating lasting impact in education, healthcare, 
@@ -59,17 +63,21 @@ export default function ProjectsSection() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-light-gray rounded-2xl overflow-hidden hover:shadow-xl transition-shadow animate-fade-in">
+            <Card 
+              key={index} 
+              className={`bg-light-gray rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all transform duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{transitionDelay: `${index * 100}ms`}}
+            >
               <img 
                 src={project.image} 
                 alt={project.title}
-                className="w-full h-48 object-cover" 
+                className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105" 
               />
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-primary-green mb-3">{project.title}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
                 <div className="flex items-center text-accent-red font-semibold">
-                  <span className="mr-2">{project.icon}</span>
+                  <span className="mr-2 text-2xl">{project.icon}</span>
                   {project.stat}
                 </div>
               </CardContent>

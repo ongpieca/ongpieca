@@ -13,22 +13,34 @@ export default function Counter({ end, isVisible, duration = 2000 }: CounterProp
   useEffect(() => {
     if (isVisible && !hasAnimated) {
       setHasAnimated(true);
-      const increment = end / (duration / 20);
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= end) {
-          setCount(end);
-          clearInterval(timer);
+      
+      // Use easing function for smooth animation
+      const startTime = Date.now();
+      
+      const animate = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function (ease-out)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentCount = Math.floor(easeOut * end);
+        
+        setCount(currentCount);
+        
+        if (progress < 1) {
+          requestAnimationFrame(animate);
         } else {
-          setCount(Math.floor(current));
+          setCount(end);
         }
-      }, 20);
-
-      return () => clearInterval(timer);
+      };
+      
+      requestAnimationFrame(animate);
     }
   }, [isVisible, end, duration, hasAnimated]);
 
-  return <span>{count.toLocaleString()}</span>;
+  return (
+    <span className="inline-block transform transition-all duration-300 hover:scale-110">
+      {count.toLocaleString()}
+    </span>
+  );
 }
