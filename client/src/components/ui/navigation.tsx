@@ -51,9 +51,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
               About Us
             </button>
-            <button onClick={() => scrollToSection('contact')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
+            <a href="/contact" className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
               Contact
-            </button>
+            </a>
           </div>
           <Button 
             onClick={() => scrollToSection('donate')}
