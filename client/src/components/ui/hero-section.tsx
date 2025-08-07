@@ -19,7 +19,6 @@ export default function HeroSection() {
           backgroundPosition: 'center'
         }}
       />
-      
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4 animate-fade-in">
         <h1 className="text-4xl md:text-7xl font-black text-white mb-8 leading-tight">
           <span className="text-yellow-400">PRESERVING</span>{' '}
@@ -28,7 +27,7 @@ export default function HeroSection() {
           <span className="text-white">TRANSFORMING</span>{' '}
           <span className="text-accent-red bg-white px-4 py-2 rounded">COMMUNITIES</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12">
+        <p className="md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 font-normal text-[20px]">
           Drawing on decades of experience, ARPIECA works hand-in-hand with communities across 
           Senegal, using innovative strategies to preserve Islamic heritage while supporting 
           comprehensive development in education, healthcare, water accessibility, and religious services.
