@@ -1,0 +1,82 @@
+import { Card, CardContent } from "./card";
+
+export default function ProjectsSection() {
+  const projects = [
+    {
+      title: "Education Infrastructure",
+      description: "Building 6 schools to provide quality education and preserve Islamic knowledge for future generations.",
+      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "6 Schools Built",
+      icon: "🎓"
+    },
+    {
+      title: "Healthcare Services",
+      description: "Providing essential medical care including cataract surgeries and health center construction.",
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "600+ Surgeries Performed",
+      icon: "🏥"
+    },
+    {
+      title: "Water Access",
+      description: "Drilling water wells to provide clean, accessible water sources for entire communities.",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "305 Wells Drilled",
+      icon: "💧"
+    },
+    {
+      title: "Religious Infrastructure",
+      description: "Constructing mosques to serve as spiritual centers and preserve Islamic heritage in communities.",
+      image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "48 Mosques Built",
+      icon: "🕌"
+    },
+    {
+      title: "Food Security",
+      description: "Distributing essential food items and COVID-19 relief to vulnerable families, widows, and orphans.",
+      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "1000+ Families Supported",
+      icon: "🤝"
+    },
+    {
+      title: "International Partnerships",
+      description: "Collaborating with Kuwait-based charities and Senegalese authorities for maximum impact.",
+      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      stat: "Strategic Partnerships",
+      icon: "🤝"
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">Our Projects</h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Comprehensive development initiatives across Senegal, creating lasting impact in education, healthcare, 
+            water access, and spiritual guidance for vulnerable communities.
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <Card key={index} className="bg-light-gray rounded-2xl overflow-hidden hover:shadow-xl transition-shadow animate-fade-in">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-48 object-cover" 
+              />
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-primary-green mb-3">{project.title}</h3>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+                <div className="flex items-center text-accent-red font-semibold">
+                  <span className="mr-2">{project.icon}</span>
+                  {project.stat}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
