@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 export default function StatisticsSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const isVisible = useIntersectionObserver(ref, { threshold: 0.7 });
+  const isVisible = useIntersectionObserver(ref, { threshold: 0.3 });
 
   return (
     <section id="impact" className="py-20 bg-white" ref={ref}>
@@ -20,7 +20,7 @@ export default function StatisticsSection() {
           <div className="text-center animate-fade-in">
             <div className="text-4xl text-accent-red mb-4">🏫</div>
             <div className="text-4xl lg:text-6xl font-black text-accent-red mb-2">
-              <Counter end={6} isVisible={isVisible} />
+              <Counter end={7} isVisible={isVisible} />
             </div>
             <p className="text-gray-700 font-semibold">Schools & Health Centers<br />Constructed</p>
           </div>
