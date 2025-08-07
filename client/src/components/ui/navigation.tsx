@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "./button";
 import { Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./language-selector";
 import arpiecaLogo from "@assets/upscalemedia-transformed_1754608155161.jpeg";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,28 +41,23 @@ export default function Navigation() {
               </div>
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('work')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-              Our Work
-            </button>
+          <div className="hidden md:flex items-center space-x-6">
             <button onClick={() => scrollToSection('projects')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-              Projects
-            </button>
-            <button onClick={() => scrollToSection('impact')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-              Our Impact
+              {t.nav.projects}
             </button>
             <button onClick={() => scrollToSection('about')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-              About Us
+              {t.nav.aboutUs}
             </button>
             <a href="/contact" className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-              Contact
+              {t.nav.contact}
             </a>
+            <LanguageSelector />
           </div>
           <Button 
             onClick={() => scrollToSection('donate')}
             className="bg-accent-red text-white px-6 py-2 rounded-full font-semibold hover:bg-red-600 transition-colors"
           >
-            DONATE <Heart className="ml-1 h-4 w-4" />
+            {t.nav.donate} <Heart className="ml-1 h-4 w-4" />
           </Button>
         </div>
       </div>

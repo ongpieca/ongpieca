@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { ArrowLeft } from "lucide-react";
@@ -27,6 +28,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -74,10 +76,10 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link href="/" className="inline-flex items-center text-primary-green hover:text-green-700 mb-8 transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
+            {t.contact.backToHome}
           </Link>
           
-          <h1 className="text-4xl lg:text-5xl font-black text-accent-red mb-6">Contact Us</h1>
+          <h1 className="text-4xl lg:text-5xl font-black text-accent-red mb-6">{t.contact.title}</h1>
           
           <div className="text-gray-700 space-y-2">
             <p>

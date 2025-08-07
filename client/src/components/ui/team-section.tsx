@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { Card, CardContent } from "./card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useScrollAnimation(ref, { threshold: 0.2 });
+  const { t } = useLanguage();
 
   const teamMembers = [
     {
