@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./button";
 import { Heart } from "lucide-react";
+import arpiecaLogo from "@assets/upscalemedia-transformed_1754608155161.jpeg";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,8 +27,15 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className={`px-4 py-2 rounded font-bold text-xl transition-colors ${isScrolled ? 'bg-primary-green text-white' : 'bg-white/20 text-white backdrop-blur-sm'}`}>
-              ARPIECA
+            <div className="flex items-center space-x-3">
+              <img 
+                src={arpiecaLogo} 
+                alt="ARPIECA Logo" 
+                className="h-12 w-12 object-contain rounded-lg"
+              />
+              <div className={`px-3 py-2 rounded font-bold text-xl transition-colors ${isScrolled ? 'bg-primary-green text-white' : 'bg-white/20 text-white backdrop-blur-sm'}`}>
+                ARPIECA
+              </div>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
