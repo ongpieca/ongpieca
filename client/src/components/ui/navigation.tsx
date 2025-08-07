@@ -31,7 +31,7 @@ export default function Navigation() {
               <img 
                 src={arpiecaLogo} 
                 alt="ARPIECA Logo" 
-                className="h-12 w-12 object-contain rounded-lg"
+                className="h-16 w-16 object-contain rounded-lg"
               />
               <div className={`px-3 py-2 rounded font-bold text-xl transition-colors ${isScrolled ? 'bg-primary-green text-white' : 'bg-white/20 text-white backdrop-blur-sm'}`}>
                 ARPIECA
