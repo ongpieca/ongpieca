@@ -3,7 +3,7 @@ import { Button } from "./button";
 import { Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./language-selector";
-import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

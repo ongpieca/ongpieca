@@ -2,7 +2,7 @@ import { Button } from "./button";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
-import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
 export default function Footer() {
   const { t } = useLanguage();

@@ -13,7 +13,7 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
-import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
