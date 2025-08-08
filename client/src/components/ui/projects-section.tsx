@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import classroomImage from "@assets/PHOTO-2025-08-08-01-47-45_1754625641179.jpg";
 import waterWellImage from "@assets/unnamed_1754626003238.jpg";
 import healthcareImage from "@assets/ong-arpieca-1740381081-193073124_1754626072493.jpg";
+import mosqueImage from "@assets/PHOTO-2025-08-08-01-47-51_1754627175313.jpg";
 
 export default function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,7 +36,7 @@ export default function ProjectsSection() {
     {
       title: "Religious Infrastructure",
       description: "Constructing mosques to serve as spiritual centers and preserve Islamic heritage in communities.",
-      image: "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: mosqueImage,
       stat: "48 Mosques Built",
       icon: "🕌"
     },

@@ -3,7 +3,7 @@ import { Button } from "./button";
 import { Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./language-selector";
-import arpiecaLogo from "@assets/upscalemedia-transformed_1754608155161.jpeg";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +34,7 @@ export default function Navigation() {
               <img 
                 src={arpiecaLogo} 
                 alt="ARPIECA Logo" 
-                className="h-16 w-16 object-contain rounded-lg"
+                className="h-20 w-20 object-contain"
               />
               <div className="px-3 py-2 rounded font-bold text-xl transition-colors text-white bg-[#4b7a2b]">ONG ARPIECA</div>
             </div>

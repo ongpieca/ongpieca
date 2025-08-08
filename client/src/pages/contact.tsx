@@ -13,6 +13,7 @@ import Navigation from "@/components/ui/navigation";
 import Footer from "@/components/ui/footer";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -79,7 +80,17 @@ export default function ContactPage() {
             {t.contact.backToHome}
           </Link>
           
-          <h1 className="text-4xl lg:text-5xl font-black text-accent-red mb-6">{t.contact.title}</h1>
+          {/* Prominent Logo Section */}
+          <div className="text-center mb-12">
+            <img 
+              src={arpiecaLogo} 
+              alt="ARPIECA Official Logo" 
+              className="h-40 w-40 mx-auto object-contain mb-6"
+            />
+            <h2 className="text-xl font-semibold text-primary-green mb-4">Association pour la Renaissance du Patrimoine Islamique et de l'Expansion de la Culture Arabe</h2>
+          </div>
+          
+          <h1 className="text-4xl lg:text-5xl font-black text-accent-red mb-6 text-center">{t.contact.title}</h1>
           
           <div className="text-gray-700 space-y-2">
             <p>

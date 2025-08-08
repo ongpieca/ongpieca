@@ -2,6 +2,7 @@ import { Button } from "./button";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
+import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754627081956.jpg";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -16,6 +17,16 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-white border-t border-gray-200 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Logo Section */}
+        <div className="text-center mb-12">
+          <img 
+            src={arpiecaLogo} 
+            alt="ARPIECA Official Logo" 
+            className="h-32 w-32 mx-auto object-contain mb-4"
+          />
+          <h2 className="text-2xl font-bold text-primary-green">Association pour la Renaissance du Patrimoine Islamique et de l'Expansion de la Culture Arabe</h2>
+        </div>
+        
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-primary-green mb-4">{t.footer.quickLinks}</h3>
