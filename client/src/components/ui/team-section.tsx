@@ -3,6 +3,7 @@ import { Card, CardContent } from "./card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import directorImage from "@assets/Screenshot 2025-08-08 064141_1754626152013.png";
+import programDirectorImage from "@assets/Screenshot 2025-08-08 064329_1754626183111.png";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,8 +19,8 @@ export default function TeamSection() {
     },
     {
       name: "Fatima Ba",
-      position: "Program Director",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c90bb8d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&h=387",
+      position: "Program Director", 
+      image: programDirectorImage,
       description: "Overseeing education and healthcare initiatives across Senegal's rural communities."
     },
     {
