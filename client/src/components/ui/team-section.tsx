@@ -12,7 +12,7 @@ export default function TeamSection() {
 
   const teamMembers = [
     {
-      name: "Dr. Ahmed Al-Mansouri",
+      name: "Dr. Mouhamed Habibou Diallo",
       position: "Executive Director",
       image: directorImage,
       description: "Leading ARPIECA's mission with 15+ years in humanitarian work and Islamic heritage preservation."
