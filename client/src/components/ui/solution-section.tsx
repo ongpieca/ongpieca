@@ -1,6 +1,7 @@
 import { Button } from "./button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import mosqueImage from "@assets/PHOTO-2025-08-08-01-48-15_1754626959757.jpg";
 
 export default function SolutionSection() {
   const { t } = useLanguage();
@@ -17,7 +18,7 @@ export default function SolutionSection() {
       <div 
         className="absolute inset-0 bg-gradient-to-l from-black/70 to-black/50"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+          backgroundImage: `url(${mosqueImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
