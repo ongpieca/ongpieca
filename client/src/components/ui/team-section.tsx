@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Card, CardContent } from "./card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import directorImage from "@assets/Screenshot 2025-08-08 064141_1754626152013.png";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,7 +13,7 @@ export default function TeamSection() {
     {
       name: "Dr. Ahmed Al-Mansouri",
       position: "Executive Director",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&h=387",
+      image: directorImage,
       description: "Leading ARPIECA's mission with 15+ years in humanitarian work and Islamic heritage preservation."
     },
     {
