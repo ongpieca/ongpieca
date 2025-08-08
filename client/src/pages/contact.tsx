@@ -91,21 +91,6 @@ export default function ContactPage() {
           </div>
           
           <h1 className="text-4xl lg:text-5xl font-black text-accent-red mb-6 text-center">{t.contact.title}</h1>
-          
-          <div className="text-gray-700 space-y-2">
-            <p>
-              Hi, please complete the form below to let us know how we can help you, or check the{" "}
-              <span className="text-primary-green font-semibold cursor-pointer hover:underline">
-                Frequently Asked Questions
-              </span>{" "}
-              first to see if your question has already been answered.
-            </p>
-            <p>
-              For <strong>Immediate Assistance</strong>, please contact Supporter Care toll-free at{" "}
-              <span className="text-primary-green font-semibold">1-800-728-3843</span>{" "}
-              Mon-Fri 8:00am-5:00pm ET.
-            </p>
-          </div>
         </div>
       </section>
 
