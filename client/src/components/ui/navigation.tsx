@@ -36,9 +36,7 @@ export default function Navigation() {
                 alt="ARPIECA Logo" 
                 className="h-16 w-16 object-contain rounded-lg"
               />
-              <div className={`px-3 py-2 rounded font-bold text-xl transition-colors ${isScrolled ? 'bg-primary-green text-white' : 'bg-white/20 text-white backdrop-blur-sm'}`}>
-                ARPIECA
-              </div>
+              <div className="px-3 py-2 rounded font-bold text-xl transition-colors text-white bg-[#4b7a2b]">ONG ARPIECA</div>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
