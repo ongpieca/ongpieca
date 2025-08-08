@@ -40,7 +40,7 @@ export default function Navigation() {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            <button onClick={() => scrollToSection('projects')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
+            <button onClick={() => scrollToSection('projects')} className="transition-colors hover:text-primary-green text-[#050505]">
               {t.nav.projects}
             </button>
             <button onClick={() => scrollToSection('about')} className="transition-colors hover:text-primary-green text-[#000000]">
