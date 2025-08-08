@@ -4,6 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import directorImage from "@assets/Screenshot 2025-08-08 064141_1754626152013.png";
 import programDirectorImage from "@assets/Screenshot 2025-08-08 064329_1754626183111.png";
+import waterCoordinatorImage from "@assets/Screenshot 2025-08-08 123030_1754645463294.png";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +27,7 @@ export default function TeamSection() {
     {
       name: "Ibrahim Diallo",
       position: "Water & Infrastructure Coordinator",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&h=387",
+      image: waterCoordinatorImage,
       description: "Managing water well projects and infrastructure development for sustainable community growth."
     },
     {
