@@ -57,7 +57,7 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">{t.projects.title}</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             {t.projects.description}
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
               />
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-primary-green mb-3">{project.title}</h3>
-                <p className="text-gray-700 mb-4">{project.description}</p>
+                <p className="text-black mb-4">{project.description}</p>
                 <div className="flex items-center text-accent-red font-semibold">
                   <span className="mr-2 text-2xl">{project.icon}</span>
                   {project.stat}

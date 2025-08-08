@@ -24,7 +24,7 @@ export default function PartnersSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">{t.partners.title}</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-black max-w-3xl mx-auto mb-12">
             {t.partners.description}
           </p>
           
@@ -49,13 +49,13 @@ export default function PartnersSection() {
               style={{transitionDelay: `${(index + 2) * 100}ms`}}
             >
               <h3 className="text-lg font-bold text-primary-green mb-3">{partner.name}</h3>
-              <p className="text-gray-600 text-sm">{partner.description}</p>
+              <p className="text-black text-sm">{partner.description}</p>
             </div>
           ))}
         </div>
         
         <div className={`text-center mt-12 transform transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          <p className="text-lg text-gray-700 font-medium">
+          <p className="text-lg text-black font-medium">
             {t.partners.footerText}
           </p>
         </div>
