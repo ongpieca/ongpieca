@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/contexts/LanguageContext";
 import directorImage from "@assets/Screenshot 2025-08-08 064141_1754626152013.png";
 import programDirectorImage from "@assets/Screenshot 2025-08-08 064329_1754626183111.png";
-import waterCoordinatorImage from "@assets/Screenshot 2025-08-08 123212_1754645565193.png";
+import waterCoordinatorImage from "@assets/Screenshot 2025-08-08 123030_1754645463294.png";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
