@@ -46,7 +46,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('about')} className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
               {t.nav.aboutUs}
             </button>
-            <a href="/contact" className={`transition-colors hover:text-primary-green ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
+            <a href="/contact" className="transition-colors hover:text-primary-green text-[#0a0a0a]">
               {t.nav.contact}
             </a>
             <LanguageSelector />
