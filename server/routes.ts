@@ -12,7 +12,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Try to forward to n8n webhook
       try {
-        const webhookResponse = await fetch('https://ongpieca.app.n8n.cloud/webhook-test/replit', {
+        const webhookResponse = await fetch('https://ongpieca.app.n8n.cloud/webhook-test/78d78c5b-140e-4b6e-8dbe-23de25138af9', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
