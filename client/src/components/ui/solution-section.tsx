@@ -1,7 +1,10 @@
 import { Button } from "./button";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SolutionSection() {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,11 +26,9 @@ export default function SolutionSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
-            <h2 className="text-4xl lg:text-5xl font-black text-yellow-400 mb-6">The Solution</h2>
+            <h2 className="text-4xl lg:text-5xl font-black text-yellow-400 mb-6">{t.solution.title}</h2>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
-              Through the development of comprehensive and culturally-sensitive interventions, ARPIECA works to 
-              strengthen communities by providing essential services in education, healthcare, water access, and 
-              religious guidance, empowering them to be the architects of their own sustainable development.
+              {t.solution.description}
             </p>
             <Button 
               onClick={() => scrollToSection('projects')}

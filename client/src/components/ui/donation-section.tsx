@@ -6,8 +6,10 @@ import { Checkbox } from "./checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 import { Heart } from "lucide-react";
 import { Card, CardContent } from "./card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function DonationSection() {
+  const { t } = useLanguage();
   const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('monthly');
   const [selectedAmount, setSelectedAmount] = useState(250);
   const [customAmount, setCustomAmount] = useState('');
@@ -35,10 +37,10 @@ export default function DonationSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">
-            BECOME A PARTNER OF CHANGE TODAY
+            {t.donation.title}
           </h2>
           <p className="text-xl text-gray-700">
-            Give Communities a Voice in Development and Let Them Thrive
+            {t.donation.description}
           </p>
         </div>
 

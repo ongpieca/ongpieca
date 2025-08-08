@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { Card, CardContent } from "./card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useScrollAnimation(ref, { threshold: 0.2 });
+  const { t } = useLanguage();
   const projects = [
     {
       title: "Education Infrastructure",
@@ -54,10 +56,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-20 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">Our Projects</h2>
+          <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">{t.projects.title}</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Comprehensive development initiatives across Senegal, creating lasting impact in education, healthcare, 
-            water access, and spiritual guidance for vulnerable communities.
+            {t.projects.description}
           </p>
         </div>
         
