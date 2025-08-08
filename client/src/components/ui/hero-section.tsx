@@ -1,6 +1,7 @@
 import { Button } from "./button";
 import { ArrowRight, Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import heroImage from "@assets/PHOTO-2025-08-08-01-47-48_1754627968594.jpg";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -17,7 +18,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
