@@ -203,6 +203,16 @@ export interface Translation {
     subscribe: string;
     copyright: string;
   };
+  
+  // Language Selection
+  languageSelector: {
+    selectLanguage: string;
+    languages: {
+      en: string;
+      ar: string;
+      fr: string;
+    };
+  };
 }
 
 // English translations
@@ -403,6 +413,15 @@ export const en: Translation = {
     enterEmail: "Enter your email",
     subscribe: "Subscribe", 
     copyright: "© 2024 ARPIECA. All rights reserved."
+  },
+  
+  languageSelector: {
+    selectLanguage: "Select Language",
+    languages: {
+      en: "English",
+      ar: "العربية",
+      fr: "Français"
+    }
   }
 };
 
@@ -604,6 +623,15 @@ export const ar: Translation = {
     enterEmail: "أدخل بريدك الإلكتروني",
     subscribe: "اشترك",
     copyright: "© 2024 أربيكا. جميع الحقوق محفوظة."
+  },
+  
+  languageSelector: {
+    selectLanguage: "اختر اللغة",
+    languages: {
+      en: "English",
+      ar: "العربية",
+      fr: "Français"
+    }
   }
 };
 
@@ -805,6 +833,15 @@ export const fr: Translation = {
     enterEmail: "Entrez votre email",
     subscribe: "S'abonner",
     copyright: "© 2024 ARPIECA. Tous droits réservés."
+  },
+  
+  languageSelector: {
+    selectLanguage: "Sélectionner la Langue",
+    languages: {
+      en: "English",
+      ar: "العربية",
+      fr: "Français"
+    }
   }
 };
 
