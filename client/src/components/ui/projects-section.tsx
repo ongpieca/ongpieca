@@ -14,45 +14,45 @@ export default function ProjectsSection() {
   const { t } = useLanguage();
   const projects = [
     {
-      title: "Education Infrastructure",
-      description: "Building 6 schools to provide quality education and preserve Islamic knowledge for future generations.",
+      title: t.projects.list.education.title,
+      description: t.projects.list.education.description,
       image: classroomImage,
-      stat: "6 Schools Built",
+      stat: t.projects.list.education.stat,
       icon: "🎓"
     },
     {
-      title: "Healthcare Services",
-      description: "Providing essential medical care including cataract surgeries and health center construction.",
+      title: t.projects.list.healthcare.title,
+      description: t.projects.list.healthcare.description,
       image: healthcareImage,
-      stat: "600+ Surgeries Performed",
+      stat: t.projects.list.healthcare.stat,
       icon: "🏥"
     },
     {
-      title: "Water Access",
-      description: "Drilling water wells to provide clean, accessible water sources for entire communities.",
+      title: t.projects.list.water.title,
+      description: t.projects.list.water.description,
       image: waterWellImage,
-      stat: "305 Wells Drilled",
+      stat: t.projects.list.water.stat,
       icon: "💧"
     },
     {
-      title: "Religious Infrastructure",
-      description: "Constructing mosques to serve as spiritual centers and preserve Islamic heritage in communities.",
+      title: t.projects.list.heritage.title,
+      description: t.projects.list.heritage.description,
       image: mosqueImage,
-      stat: "48 Mosques Built",
+      stat: t.projects.list.heritage.stat,
       icon: "🕌"
     },
     {
-      title: "Food Security",
-      description: "Distributing essential food items and COVID-19 relief to vulnerable families, widows, and orphans.",
+      title: t.projects.list.emergency.title,
+      description: t.projects.list.emergency.description,
       image: foodSecurityImage,
-      stat: "1000+ Families Supported",
+      stat: t.projects.list.emergency.stat,
       icon: "🤝"
     },
     {
-      title: "International Partnerships",
-      description: "Collaborating with Kuwait-based charities and Senegalese authorities for maximum impact.",
+      title: t.projects.list.community.title,
+      description: t.projects.list.community.description,
       image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      stat: "Strategic Partnerships",
+      stat: t.projects.list.community.stat,
       icon: "🤝"
     }
   ];
