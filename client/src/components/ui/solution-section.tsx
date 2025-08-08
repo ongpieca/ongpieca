@@ -35,16 +35,13 @@ export default function SolutionSection() {
               onClick={() => scrollToSection('projects')}
               className="bg-accent-red text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-red-600 transition-all transform hover:scale-105"
             >
-              Read More <ArrowRight className="ml-2 h-5 w-5" />
+              {t.solution.readMore} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
           <div id="about" className="bg-yellow-400 p-8 rounded-2xl animate-slide-in-right">
-            <h3 className="text-2xl font-bold text-black mb-6">About ARPIECA</h3>
+            <h3 className="text-2xl font-bold text-black mb-6">{t.solution.aboutTitle}</h3>
             <p className="text-black leading-relaxed">
-              The <strong>Association pour la Renaissance du Patrimoine Islamique et de l'Expansion de la Culture Arabe</strong> 
-              has worked for decades with governments, communities, and international partners to reach comprehensive 
-              development goals. Using a unique approach that addresses both cultural preservation and modern needs, 
-              ARPIECA has made significant strides and is recognized as a leader in community-driven development across Senegal.
+              {t.solution.aboutDescription}
             </p>
           </div>
         </div>

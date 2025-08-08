@@ -1,26 +1,20 @@
 import { CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function PartnershipSection() {
-  const achievements = [
-    "Legally recognized humanitarian NGO in Senegal",
-    "Partnership with Kuwait-based Horizons Charity Society", 
-    "Collaboration with Senegalese government authorities",
-    "Complete financial transparency and accountability"
-  ];
+  const { t } = useLanguage();
 
   return (
     <section className="py-20 bg-primary-green text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6">Transparency & Partnerships</h2>
+            <h2 className="text-4xl lg:text-5xl font-black mb-6">{t.partnership.title}</h2>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
-              ARPIECA operates with complete transparency and legal compliance. We work in full accordance with 
-              Senegalese law and maintain strong partnerships with certified international organizations, 
-              particularly with Kuwait-based charities and the Haute Autorité du Waqf.
+              {t.partnership.description}
             </p>
             <div className="space-y-4">
-              {achievements.map((achievement, index) => (
+              {t.partnership.achievements.map((achievement, index) => (
                 <div key={index} className="flex items-center">
                   <CheckCircle className="text-yellow-400 mr-3 h-5 w-5" />
                   <span>{achievement}</span>

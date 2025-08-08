@@ -15,27 +15,27 @@ export default function TeamSection() {
   const teamMembers = [
     {
       name: "Dr. Mouhamed Habibou Diallo",
-      position: "Executive Director",
+      position: t.team.members.director.position,
       image: directorImage,
-      description: "Leading ARPIECA's mission with 15+ years in humanitarian work and Islamic heritage preservation."
+      description: t.team.members.director.description
     },
     {
       name: "Fatima Ba",
-      position: "Program Director", 
+      position: t.team.members.programDirector.position, 
       image: programDirectorImage,
-      description: "Overseeing education and healthcare initiatives across Senegal's rural communities."
+      description: t.team.members.programDirector.description
     },
     {
       name: "Ibrahim Diallo",
-      position: "Water & Infrastructure Coordinator",
+      position: t.team.members.waterCoordinator.position,
       image: waterCoordinatorImage,
-      description: "Managing water well projects and infrastructure development for sustainable community growth."
+      description: t.team.members.waterCoordinator.description
     },
     {
       name: "Aisha Sarr",
-      position: "Community Outreach Manager",
+      position: t.team.members.outreachManager.position,
       image: outreachManagerImage,
-      description: "Building relationships with local communities and coordinating volunteer programs."
+      description: t.team.members.outreachManager.description
     }
   ];
 
@@ -43,9 +43,9 @@ export default function TeamSection() {
     <section id="about" className="py-20 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">Our Team</h2>
+          <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">{t.team.title}</h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            Dedicated professionals working together to preserve Islamic heritage and transform communities across Senegal.
+            {t.team.description}
           </p>
         </div>
         

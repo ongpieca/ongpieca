@@ -40,6 +40,9 @@ export interface Translation {
   solution: {
     title: string;
     description: string;
+    aboutTitle: string;
+    aboutDescription: string;
+    readMore: string;
     education: {
       title: string;
       description: string;
@@ -101,6 +104,13 @@ export interface Translation {
       local: string;
     };
     footerText: string;
+  };
+  
+  // Partnership/Transparency Section
+  partnership: {
+    title: string;
+    description: string;
+    achievements: string[];
   };
   
   // Projects Section
@@ -233,6 +243,9 @@ export const en: Translation = {
   solution: {
     title: "Our Solution",
     description: "ARPIECA addresses these challenges through integrated programs that combine immediate relief with long-term sustainable development, always respecting and preserving Islamic cultural values.",
+    aboutTitle: "About ARPIECA",
+    aboutDescription: "The Association pour la Renaissance du Patrimoine Islamique et de l'Expansion de la Culture Arabe has worked for decades with governments, communities, and international partners to reach comprehensive development goals. Using a unique approach that addresses both cultural preservation and modern needs, ARPIECA has made significant strides and is recognized as a leader in community-driven development across Senegal.",
+    readMore: "Read More",
     education: {
       title: "Education & Learning",
       description: "Building schools, training teachers, and providing educational resources to ensure every child has access to quality education rooted in Islamic values."
@@ -370,6 +383,17 @@ export const en: Translation = {
     donateNow: "Donate Now"
   },
   
+  partnership: {
+    title: "Transparency & Partnerships",
+    description: "ARPIECA operates with complete transparency and legal compliance. We work in full accordance with Senegalese law and maintain strong partnerships with certified international organizations, particularly with Kuwait-based charities and the Haute Autorité du Waqf.",
+    achievements: [
+      "Legally recognized humanitarian NGO in Senegal",
+      "Partnership with Kuwait-based Horizons Charity Society", 
+      "Collaboration with Senegalese government authorities",
+      "Complete financial transparency and accountability"
+    ]
+  },
+  
   footer: {
     description: "ARPIECA is dedicated to preserving Islamic heritage while supporting comprehensive community development across Senegal through education, healthcare, water accessibility, and religious services.",
     quickLinks: "Quick Links",
@@ -420,6 +444,9 @@ export const ar: Translation = {
   solution: {
     title: "حلولنا",
     description: "تواجه أربيكا هذه التحديات من خلال برامج متكاملة تجمع بين الإغاثة الفورية والتنمية المستدامة طويلة المدى، مع احترام القيم الثقافية الإسلامية والحفاظ عليها دائماً.",
+    aboutTitle: "حول أربيكا",
+    aboutDescription: "تعمل جمعية النهضة للتراث الإسلامي وتوسيع الثقافة العربية منذ عقود مع الحكومات والمجتمعات والشركاء الدوليين لتحقيق أهداف التنمية الشاملة. باستخدام نهج فريد يتناول كلاً من الحفاظ على التراث الثقافي والاحتياجات الحديثة، حققت أربيكا خطوات مهمة وتُعرف كرائدة في التنمية المجتمعية في جميع أنحاء السنغال.",
+    readMore: "اقرأ المزيد",
     education: {
       title: "التعليم والتعلم",
       description: "بناء المدارس وتدريب المعلمين وتوفير الموارد التعليمية لضمان حصول كل طفل على تعليم جيد متجذر في القيم الإسلامية."
@@ -443,7 +470,7 @@ export const ar: Translation = {
     description: "مهنيون مخلصون يعملون معاً للحفاظ على التراث الإسلامي وتحويل المجتمعات في جميع أنحاء السنغال.",
     members: {
       director: {
-        name: "د. أحمد المنصوري",
+        name: "د. محمد حبيبو ديالو",
         position: "المدير التنفيذي",
         description: "قيادة مهمة أربيكا بخبرة تزيد عن 15 عاماً في العمل الإنساني والحفاظ على التراث الإسلامي."
       },
@@ -557,6 +584,17 @@ export const ar: Translation = {
     donateNow: "تبرع الآن"
   },
   
+  partnership: {
+    title: "الشفافية والشراكات",
+    description: "تعمل أربيكا بشفافية كاملة وامتثال قانوني. نعمل وفقاً تاماً للقانون السنغالي ونحافظ على شراكات قوية مع المنظمات الدولية المعتمدة، وخاصة مع الجمعيات الخيرية الكويتية والهيئة العليا للوقف.",
+    achievements: [
+      "منظمة غير حكومية إنسانية معترف بها قانونياً في السنغال",
+      "شراكة مع جمعية آفاق الخيرية الكويتية",
+      "تعاون مع السلطات الحكومية السنغالية",
+      "شفافية مالية ومساءلة كاملة"
+    ]
+  },
+  
   footer: {
     description: "أربيكا مكرسة للحفاظ على التراث الإسلامي مع دعم التنمية الشاملة للمجتمع في جميع أنحاء السنغال من خلال التعليم والرعاية الصحية وإمكانية الوصول إلى المياه والخدمات الدينية.",
     quickLinks: "روابط سريعة",
@@ -607,6 +645,9 @@ export const fr: Translation = {
   solution: {
     title: "Notre Solution",
     description: "ARPIECA aborde ces défis à travers des programmes intégrés qui combinent l'aide immédiate avec le développement durable à long terme, en respectant et préservant toujours les valeurs culturelles islamiques.",
+    aboutTitle: "À Propos d'ARPIECA",
+    aboutDescription: "L'Association pour la Renaissance du Patrimoine Islamique et de l'Expansion de la Culture Arabe travaille depuis des décennies avec les gouvernements, les communautés et les partenaires internationaux pour atteindre des objectifs de développement complet. En utilisant une approche unique qui aborde à la fois la préservation culturelle et les besoins modernes, ARPIECA a fait des progrès significatifs et est reconnue comme un leader dans le développement communautaire à travers le Sénégal.",
+    readMore: "Lire Plus",
     education: {
       title: "Éducation et Apprentissage",
       description: "Construction d'écoles, formation d'enseignants et fourniture de ressources éducatives pour s'assurer que chaque enfant ait accès à une éducation de qualité enracinée dans les valeurs islamiques."
@@ -630,7 +671,7 @@ export const fr: Translation = {
     description: "Des professionnels dévoués travaillant ensemble pour préserver le patrimoine islamique et transformer les communautés à travers le Sénégal.",
     members: {
       director: {
-        name: "Dr. Ahmed Al-Mansouri",
+        name: "Dr. Mouhamed Habibou Diallo",
         position: "Directeur Exécutif",
         description: "Dirigeant la mission d'ARPIECA avec plus de 15 ans dans le travail humanitaire et la préservation du patrimoine islamique."
       },
@@ -742,6 +783,17 @@ export const fr: Translation = {
     title: "Soutenez Notre Mission",
     description: "Vos dons généreux nous aident à continuer notre travail vital dans l'éducation, les soins de santé, l'accès à l'eau et la préservation du patrimoine à travers le Sénégal.",
     donateNow: "Donner Maintenant"
+  },
+  
+  partnership: {
+    title: "Transparence et Partenariats",
+    description: "ARPIECA fonctionne avec une transparence complète et une conformité légale. Nous travaillons en pleine conformité avec la loi sénégalaise et maintenons des partenariats solides avec des organisations internationales certifiées, en particulier avec des organisations caritatives koweïtiennes et la Haute Autorité du Waqf.",
+    achievements: [
+      "ONG humanitaire légalement reconnue au Sénégal",
+      "Partenariat avec la Société Caritative Horizons basée au Koweït",
+      "Collaboration avec les autorités gouvernementales sénégalaises",
+      "Transparence financière et responsabilité complètes"
+    ]
   },
   
   footer: {
