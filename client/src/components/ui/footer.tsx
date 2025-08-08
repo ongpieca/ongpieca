@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-primary-green mb-4">{t.footer.quickLinks}</h3>
-            <ul className="space-y-2 text-gray-600">
+            <ul className="space-y-2 text-black">
               <li>
                 <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-primary-green transition-colors">
                   Home
@@ -49,20 +49,20 @@ export default function Footer() {
           </div>
           
           <div>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-black leading-relaxed">
               {t.footer.description}
             </p>
           </div>
           
           <div>
             <h3 className="font-bold text-primary-green mb-4">{t.footer.contactInfo}</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-black mb-4">
               <a href="mailto:info@arpieca.org" className="hover:text-primary-green transition-colors">
                 info@arpieca.org
               </a>
             </p>
             
-            <h4 className="font-semibold text-gray-700 mb-3">{t.footer.followUs}</h4>
+            <h4 className="font-semibold text-black mb-3">{t.footer.followUs}</h4>
             <div className="flex space-x-3">
               <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">📘</a>
               <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">📷</a>
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-600">
+        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-black">
           {t.footer.copyright}
         </div>
       </div>

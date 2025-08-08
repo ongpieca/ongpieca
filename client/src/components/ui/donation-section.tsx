@@ -39,7 +39,7 @@ export default function DonationSection() {
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">
             {t.donation.title}
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-xl text-black">
             {t.donation.description}
           </p>
         </div>
@@ -55,7 +55,7 @@ export default function DonationSection() {
                   className={`px-6 py-2 rounded-full border-2 font-semibold transition-colors ${
                     donationType === 'one-time'
                       ? 'border-primary-green text-primary-green bg-primary-green/10'
-                      : 'border-gray-300 text-gray-600 hover:border-primary-green hover:text-primary-green'
+                      : 'border-gray-300 text-black hover:border-primary-green hover:text-primary-green'
                   }`}
                 >
                   One-time
@@ -67,7 +67,7 @@ export default function DonationSection() {
                   className={`px-6 py-2 rounded-full font-semibold transition-colors ${
                     donationType === 'monthly'
                       ? 'bg-accent-red text-white hover:bg-red-600'
-                      : 'text-gray-600 hover:text-accent-red'
+                      : 'text-black hover:text-accent-red'
                   }`}
                 >
                   <Heart className="mr-1 h-4 w-4" /> Monthly
@@ -99,7 +99,7 @@ export default function DonationSection() {
                   onChange={(e) => handleCustomAmountChange(e.target.value)}
                   className="w-full p-4 text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-primary-green pr-16"
                 />
-                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">
+                <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black font-semibold">
                   XOF
                 </span>
               </div>
@@ -111,7 +111,7 @@ export default function DonationSection() {
                     checked={isDedicated}
                     onCheckedChange={(checked) => setIsDedicated(checked === true)}
                   />
-                  <label htmlFor="dedicate" className="text-gray-700">
+                  <label htmlFor="dedicate" className="text-black">
                     Dedicate this donation
                   </label>
                 </div>
@@ -125,7 +125,7 @@ export default function DonationSection() {
                   />
                 )}
                 
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-gray-700">
+                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 text-sm text-black">
                   Once you've donated, you'll be able to add a personal message and send a card.
                 </div>
                 

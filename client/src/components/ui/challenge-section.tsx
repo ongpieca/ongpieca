@@ -22,7 +22,7 @@ export default function ChallengeSection() {
         <div className={`inline-block bg-yellow-400 text-black px-8 py-3 rounded-full font-bold text-lg mb-8 transform transition-all duration-800 ${isVisible ? 'opacity-100 -rotate-1 scale-100' : 'opacity-0 rotate-0 scale-75'}`}>
           {t.challenge.title}
         </div>
-        <p className={`text-xl text-gray-700 leading-relaxed mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <p className={`text-xl text-black leading-relaxed mb-8 transform transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {t.challenge.description}
         </p>
         <button 

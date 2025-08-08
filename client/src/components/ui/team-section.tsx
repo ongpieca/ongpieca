@@ -40,7 +40,7 @@ export default function TeamSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">Our Team</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Dedicated professionals working together to preserve Islamic heritage and transform communities across Senegal.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function TeamSection() {
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-primary-green mb-2">{member.name}</h3>
                 <p className="text-accent-red font-semibold mb-3">{member.position}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
+                <p className="text-black text-sm leading-relaxed">{member.description}</p>
               </CardContent>
             </Card>
           ))}

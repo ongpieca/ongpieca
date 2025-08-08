@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Card, CardContent } from "./card";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/contexts/LanguageContext";
+import classroomImage from "@assets/PHOTO-2025-08-08-01-47-45_1754625641179.jpg";
 
 export default function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,7 +12,7 @@ export default function ProjectsSection() {
     {
       title: "Education Infrastructure",
       description: "Building 6 schools to provide quality education and preserve Islamic knowledge for future generations.",
-      image: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: classroomImage,
       stat: "6 Schools Built",
       icon: "🎓"
     },
