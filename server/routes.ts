@@ -2,20 +2,39 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form endpoint
+  // Contact form endpoint with n8n webhook forwarding
   app.post("/api/contact", async (req, res) => {
     try {
-      const { name, email, subject, message } = req.body;
+      const { firstName, lastName, emailAddress, mobilePhone, contactReason, message } = req.body;
       
-      // Here you would typically send an email using nodemailer or similar
-      // For now, we'll just log the contact form submission
-      console.log('Contact form submission:', { name, email, subject, message });
+      // Log the contact form submission
+      console.log('Contact form submission:', { firstName, lastName, emailAddress, mobilePhone, contactReason, message });
+      
+      // Try to forward to n8n webhook
+      try {
+        const webhookResponse = await fetch('https://ongpieca.app.n8n.cloud/webhook-test/replit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ firstName, lastName, emailAddress, mobilePhone, contactReason, message }),
+        });
+        
+        if (webhookResponse.ok) {
+          console.log('Successfully forwarded to n8n webhook');
+        } else {
+          console.log('n8n webhook failed:', webhookResponse.status, await webhookResponse.text());
+        }
+      } catch (webhookError) {
+        console.log('n8n webhook error:', webhookError);
+      }
       
       res.json({ 
         success: true, 
         message: "Thank you for your message. We will get back to you soon!" 
       });
     } catch (error) {
+      console.error('Contact form error:', error);
       res.status(500).json({ 
         success: false, 
         message: "Failed to send message. Please try again later." 
