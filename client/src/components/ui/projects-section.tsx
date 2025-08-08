@@ -6,6 +6,7 @@ import classroomImage from "@assets/PHOTO-2025-08-08-01-47-45_1754625641179.jpg"
 import waterWellImage from "@assets/unnamed_1754626003238.jpg";
 import healthcareImage from "@assets/ong-arpieca-1740381081-193073124_1754626072493.jpg";
 import mosqueImage from "@assets/PHOTO-2025-08-08-01-47-51_1754627175313.jpg";
+import foodSecurityImage from "@assets/0ba96275-8f82-38f8-95c3-92fd556fa858_1754633093088.jpeg";
 
 export default function ProjectsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,7 +44,7 @@ export default function ProjectsSection() {
     {
       title: "Food Security",
       description: "Distributing essential food items and COVID-19 relief to vulnerable families, widows, and orphans.",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: foodSecurityImage,
       stat: "1000+ Families Supported",
       icon: "🤝"
     },
