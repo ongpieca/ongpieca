@@ -103,6 +103,16 @@ export interface Translation {
       international: string;
       local: string;
     };
+    partnerNames: {
+      education: string;
+      health: string;
+      water: string;
+      community: string;
+      heritage: string;
+      regional: string;
+      international: string;
+      local: string;
+    };
     footerText: string;
   };
   
@@ -314,6 +324,16 @@ export const en: Translation = {
       international: "Global humanitarian coordination",
       local: "Grassroots engagement and support"
     },
+    partnerNames: {
+      education: "Ministry of Education",
+      health: "Health Alliance", 
+      water: "Water Foundation",
+      community: "Community Development Partners",
+      heritage: "Islamic Heritage Foundation",
+      regional: "Regional Development Council",
+      international: "International Aid Network",
+      local: "Local Community Leaders"
+    },
     footerText: "Together, we're building stronger communities across Senegal"
   },
   
@@ -524,6 +544,16 @@ export const ar: Translation = {
       international: "التنسيق الإنساني العالمي",
       local: "المشاركة والدعم الشعبي"
     },
+    partnerNames: {
+      education: "وزارة التربية والتعليم",
+      health: "تحالف الصحة", 
+      water: "مؤسسة المياه",
+      community: "شركاء التنمية المجتمعية",
+      heritage: "مؤسسة التراث الإسلامي",
+      regional: "مجلس التنمية الإقليمي",
+      international: "شبكة المساعدات الدولية",
+      local: "قادة المجتمع المحلي"
+    },
     footerText: "معاً، نبني مجتمعات أقوى في جميع أنحاء السنغال"
   },
   
@@ -733,6 +763,16 @@ export const fr: Translation = {
       regional: "Soutien d'infrastructure et de planification",
       international: "Coordination humanitaire mondiale",
       local: "Engagement et soutien communautaire"
+    },
+    partnerNames: {
+      education: "Ministère de l'Éducation",
+      health: "Alliance de la Santé", 
+      water: "Fondation de l'Eau",
+      community: "Partenaires de Développement Communautaire",
+      heritage: "Fondation du Patrimoine Islamique",
+      regional: "Conseil de Développement Régional",
+      international: "Réseau d'Aide Internationale",
+      local: "Leaders Communautaires Locaux"
     },
     footerText: "Ensemble, nous construisons des communautés plus fortes à travers le Sénégal"
   },

@@ -9,14 +9,14 @@ export default function PartnersSection() {
   const { t } = useLanguage();
 
   const partners = [
-    { name: "Ministry of Education", description: t.partners.partnersList.education },
-    { name: "Health Alliance", description: t.partners.partnersList.health },
-    { name: "Water Foundation", description: t.partners.partnersList.water },
-    { name: "Community Development Partners", description: t.partners.partnersList.community },
-    { name: "Islamic Heritage Foundation", description: t.partners.partnersList.heritage },
-    { name: "Regional Development Council", description: t.partners.partnersList.regional },
-    { name: "International Aid Network", description: t.partners.partnersList.international },
-    { name: "Local Community Leaders", description: t.partners.partnersList.local }
+    { name: t.partners.partnerNames.education, description: t.partners.partnersList.education },
+    { name: t.partners.partnerNames.health, description: t.partners.partnersList.health },
+    { name: t.partners.partnerNames.water, description: t.partners.partnersList.water },
+    { name: t.partners.partnerNames.community, description: t.partners.partnersList.community },
+    { name: t.partners.partnerNames.heritage, description: t.partners.partnersList.heritage },
+    { name: t.partners.partnerNames.regional, description: t.partners.partnersList.regional },
+    { name: t.partners.partnerNames.international, description: t.partners.partnersList.international },
+    { name: t.partners.partnerNames.local, description: t.partners.partnersList.local }
   ];
 
   return (
