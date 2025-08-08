@@ -1,7 +1,7 @@
 import { Button } from "./button";
 import { ArrowRight, Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@assets/PHOTO-2025-08-08-01-47-48_1754627968594.jpg";
+import heroImage from "@assets/PHOTO-2025-08-08-01-47-53_1754628021348.jpg";
 
 export default function HeroSection() {
   const { t } = useLanguage();
