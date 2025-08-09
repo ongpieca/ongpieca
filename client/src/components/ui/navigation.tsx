@@ -3,6 +3,7 @@ import { Button } from "./button";
 import { Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./language-selector";
+import { Link } from "wouter";
 import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
 export default function Navigation() {
@@ -30,14 +31,14 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <img 
                 src={arpiecaLogo} 
                 alt="ARPIECA Logo" 
                 className="h-20 w-20 object-contain"
               />
               <div className="px-3 py-2 rounded font-bold text-xl transition-colors text-white bg-[#4b7a2b]">ONG ARPIECA</div>
-            </div>
+            </Link>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <button onClick={() => scrollToSection('projects')} className="transition-colors hover:text-primary-green text-[#050505]">
