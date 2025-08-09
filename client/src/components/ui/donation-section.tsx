@@ -11,7 +11,7 @@ import PayPalButton from "./paypal-button";
 
 export default function DonationSection() {
   const { t } = useLanguage();
-  const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('monthly');
+  const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
   const [selectedAmount, setSelectedAmount] = useState(250);
   const [customAmount, setCustomAmount] = useState('');
   const [isDedicated, setIsDedicated] = useState(false);
@@ -48,32 +48,7 @@ export default function DonationSection() {
         <Card className="bg-white rounded-2xl shadow-xl max-w-2xl mx-auto animate-fade-in">
           <CardContent className="p-8">
             <form className="space-y-6">
-              <div className="flex justify-center space-x-4 mb-6">
-                <Button
-                  type="button"
-                  variant={donationType === 'one-time' ? 'outline' : 'ghost'}
-                  onClick={() => setDonationType('one-time')}
-                  className={`px-6 py-2 rounded-full border-2 font-semibold transition-colors ${
-                    donationType === 'one-time'
-                      ? 'border-primary-green text-primary-green bg-primary-green/10'
-                      : 'border-gray-300 text-black hover:border-primary-green hover:text-primary-green'
-                  }`}
-                >
-                  One-time
-                </Button>
-                <Button
-                  type="button"
-                  variant={donationType === 'monthly' ? 'default' : 'ghost'}
-                  onClick={() => setDonationType('monthly')}
-                  className={`px-6 py-2 rounded-full font-semibold transition-colors ${
-                    donationType === 'monthly'
-                      ? 'bg-accent-red text-white hover:bg-red-600'
-                      : 'text-black hover:text-accent-red'
-                  }`}
-                >
-                  <Heart className="mr-1 h-4 w-4" /> Monthly
-                </Button>
-              </div>
+
 
               <div className="grid grid-cols-3 gap-4 mb-6">
                 {amounts.map((amount) => (
