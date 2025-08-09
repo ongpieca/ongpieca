@@ -2,6 +2,7 @@ import { Button } from "./button";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Facebook, Instagram, Youtube, Twitter, Linkedin } from "lucide-react";
 import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
 export default function Footer() {
@@ -75,11 +76,43 @@ export default function Footer() {
             
             <h4 className="font-semibold text-black mb-3">{t.footer.followUs}</h4>
             <div className="flex space-x-3">
-              <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">📘</a>
-              <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">📷</a>
-              <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">📺</a>
-              <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">🐦</a>
-              <a href="#" className="text-primary-green hover:text-green-700 transition-colors text-xl">💼</a>
+              <a 
+                href="https://www.facebook.com/ongarpieca.senegal/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                title="Follow us on Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a 
+                href="#" 
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                title="Follow us on Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a 
+                href="#" 
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                title="Follow us on YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+              <a 
+                href="#" 
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                title="Follow us on Twitter"
+              >
+                <Twitter size={20} />
+              </a>
+              <a 
+                href="#" 
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                title="Follow us on LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
           
