@@ -20,7 +20,7 @@ export default function TeamSection() {
       description: t.team.members.director.description
     },
     {
-      name: "Fatima Ba",
+      name: "Cherif daouda haidara",
       position: t.team.members.programDirector.position, 
       image: programDirectorImage,
       description: t.team.members.programDirector.description
