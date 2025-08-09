@@ -15,22 +15,31 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
-const contactSchema = z.object({
-  firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().min(1, "Last name is required"),
-  emailAddress: z.string().email("Please enter a valid email address"),
+// Create dynamic schema function to support translations
+const createContactSchema = (t: any) => z.object({
+  firstName: z.string().min(1, t.contact.form.firstNameRequired || "First name is required"),
+  lastName: z.string().min(1, t.contact.form.lastNameRequired || "Last name is required"),
+  emailAddress: z.string().email(t.contact.form.emailInvalid || "Please enter a valid email address"),
   mobilePhone: z.string().optional(),
-  contactReason: z.string().min(1, "Please select a contact reason"),
-  message: z.string().min(10, "Message must be at least 10 characters").max(200, "Message must be less than 200 characters")
+  contactReason: z.string().min(1, t.contact.form.contactReasonRequired || "Please select a contact reason"),
+  message: z.string().min(10, t.contact.form.messageMinLength || "Message must be at least 10 characters").max(200, t.contact.form.messageMaxLength || "Message must be less than 200 characters")
 });
 
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  mobilePhone?: string;
+  contactReason: string;
+  message: string;
+};
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { t } = useLanguage();
 
+  const contactSchema = createContactSchema(t);
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -62,16 +71,16 @@ export default function ContactPage() {
       const result = await response.json();
       
       toast({
-        title: "Message Sent Successfully",
-        description: "Thank you for contacting us. We'll respond within 3-5 business days.",
+        title: t.contact.form.messageSentTitle || "Message Sent Successfully",
+        description: t.contact.form.messageSentDescription || "Thank you for contacting us. We'll respond within 3-5 business days.",
       });
       
       form.reset();
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again later.",
+        title: t.contact.form.errorTitle || "Error",
+        description: t.contact.form.errorDescription || "Failed to send message. Please try again later.",
         variant: "destructive"
       });
     } finally {
@@ -120,7 +129,7 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        FIRST NAME<span className="text-accent-red">*</span>
+                        {t.contact.form.firstName}<span className="text-accent-red">*</span>
                       </FormLabel>
                       <FormControl>
                         <Input 
@@ -140,7 +149,7 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        LAST NAME<span className="text-accent-red">*</span>
+                        {t.contact.form.lastName}<span className="text-accent-red">*</span>
                       </FormLabel>
                       <FormControl>
                         <Input 
@@ -160,7 +169,7 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        EMAIL ADDRESS<span className="text-accent-red">*</span>
+                        {t.contact.form.emailAddress}<span className="text-accent-red">*</span>
                       </FormLabel>
                       <FormControl>
                         <Input 
@@ -181,7 +190,7 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        MOBILE PHONE (OPTIONAL)
+                        {t.contact.form.mobilePhone}
                       </FormLabel>
                       <FormControl>
                         <Input 
@@ -202,23 +211,23 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        CONTACT REASON<span className="text-accent-red">*</span>
+                        {t.contact.form.contactReason}<span className="text-accent-red">*</span>
                       </FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="border-gray-300 focus:border-primary-green focus:ring-primary-green">
-                            <SelectValue placeholder="Choose an option" />
+                            <SelectValue placeholder={t.contact.form.chooseOption || "Choose an option"} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="general-inquiry">General Inquiry</SelectItem>
-                          <SelectItem value="donation-support">Donation Support</SelectItem>
-                          <SelectItem value="volunteer-opportunities">Volunteer Opportunities</SelectItem>
-                          <SelectItem value="partnership-inquiry">Partnership Inquiry</SelectItem>
-                          <SelectItem value="project-information">Project Information</SelectItem>
-                          <SelectItem value="media-press">Media & Press</SelectItem>
-                          <SelectItem value="technical-support">Technical Support</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          <SelectItem value="general-inquiry">{t.contact.reasons.general}</SelectItem>
+                          <SelectItem value="donation-support">{t.contact.reasons.donation}</SelectItem>
+                          <SelectItem value="volunteer-opportunities">{t.contact.reasons.volunteer}</SelectItem>
+                          <SelectItem value="partnership-inquiry">{t.contact.reasons.partnership}</SelectItem>
+                          <SelectItem value="project-information">{t.contact.reasons.project}</SelectItem>
+                          <SelectItem value="media-press">{t.contact.reasons.media}</SelectItem>
+                          <SelectItem value="technical-support">{t.contact.reasons.technical}</SelectItem>
+                          <SelectItem value="other">{t.contact.reasons.other}</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -233,7 +242,7 @@ export default function ContactPage() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-gray-700 font-medium">
-                        MESSAGE<span className="text-accent-red">*</span>
+                        {t.contact.form.message}<span className="text-accent-red">*</span>
                       </FormLabel>
                       <FormControl>
                         <Textarea 
@@ -244,7 +253,7 @@ export default function ContactPage() {
                         />
                       </FormControl>
                       <div className="text-sm text-gray-500 mt-1">
-                        {remainingChars} characters max ({remainingChars} remaining)
+                        200 {t.contact.form.charactersMax} ({remainingChars} {t.contact.form.remaining})
                       </div>
                       <FormMessage />
                     </FormItem>
@@ -258,13 +267,13 @@ export default function ContactPage() {
                     disabled={isSubmitting}
                     className="bg-primary-green text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-green-700 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t.contact.form.sending : t.contact.form.sendMessage}
                   </Button>
                 </div>
 
                 {/* Footer Note */}
                 <div className="pt-4 text-sm text-gray-600 italic">
-                  Once you submit your message, a member of our email team will respond within 3-5 business days, typically sooner.
+                  {t.contact.form.footerNote}
                 </div>
               </form>
             </Form>

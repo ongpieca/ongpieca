@@ -182,6 +182,17 @@ export interface Translation {
       sendMessage: string;
       sending: string;
       footerNote: string;
+      chooseOption: string;
+      firstNameRequired: string;
+      lastNameRequired: string;
+      emailInvalid: string;
+      contactReasonRequired: string;
+      messageMinLength: string;
+      messageMaxLength: string;
+      messageSentTitle: string;
+      messageSentDescription: string;
+      errorTitle: string;
+      errorDescription: string;
     };
     reasons: {
       general: string;
@@ -393,7 +404,18 @@ export const en: Translation = {
       remaining: "remaining",
       sendMessage: "Send Message",
       sending: "Sending...",
-      footerNote: "Once you submit your message, a member of our email team will respond within 3-5 business days, typically sooner."
+      footerNote: "Once you submit your message, a member of our email team will respond within 3-5 business days, typically sooner.",
+      chooseOption: "Choose an option",
+      firstNameRequired: "First name is required",
+      lastNameRequired: "Last name is required",
+      emailInvalid: "Please enter a valid email address",
+      contactReasonRequired: "Please select a contact reason",
+      messageMinLength: "Message must be at least 10 characters",
+      messageMaxLength: "Message must be less than 200 characters",
+      messageSentTitle: "Message Sent Successfully",
+      messageSentDescription: "Thank you for contacting us. We'll respond within 3-5 business days.",
+      errorTitle: "Error",
+      errorDescription: "Failed to send message. Please try again later."
     },
     reasons: {
       general: "General Inquiry",
@@ -613,7 +635,18 @@ export const ar: Translation = {
       remaining: "متبقي",
       sendMessage: "إرسال الرسالة",
       sending: "جاري الإرسال...",
-      footerNote: "بمجرد إرسال رسالتك، سيرد عليك أحد أعضاء فريق البريد الإلكتروني خلال 3-5 أيام عمل، عادة أسرع."
+      footerNote: "بمجرد إرسال رسالتك، سيرد عليك أحد أعضاء فريق البريد الإلكتروني خلال 3-5 أيام عمل، عادة أسرع.",
+      chooseOption: "اختر خياراً",
+      firstNameRequired: "الاسم الأول مطلوب",
+      lastNameRequired: "اسم العائلة مطلوب",
+      emailInvalid: "يرجى إدخال عنوان بريد إلكتروني صحيح",
+      contactReasonRequired: "يرجى اختيار سبب الاتصال",
+      messageMinLength: "يجب أن تكون الرسالة 10 أحرف على الأقل",
+      messageMaxLength: "يجب أن تكون الرسالة أقل من 200 حرف",
+      messageSentTitle: "تم إرسال الرسالة بنجاح",
+      messageSentDescription: "شكراً لتواصلكم معنا. سنرد خلال 3-5 أيام عمل.",
+      errorTitle: "خطأ",
+      errorDescription: "فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى لاحقاً."
     },
     reasons: {
       general: "استفسار عام",
@@ -833,7 +866,18 @@ export const fr: Translation = {
       remaining: "restant",
       sendMessage: "Envoyer le Message",
       sending: "Envoi en cours...",
-      footerNote: "Une fois que vous soumettez votre message, un membre de notre équipe e-mail répondra dans 3-5 jours ouvrables, généralement plus tôt."
+      footerNote: "Une fois que vous soumettez votre message, un membre de notre équipe e-mail répondra dans 3-5 jours ouvrables, généralement plus tôt.",
+      chooseOption: "Choisissez une option",
+      firstNameRequired: "Le prénom est requis",
+      lastNameRequired: "Le nom de famille est requis",
+      emailInvalid: "Veuillez entrer une adresse e-mail valide",
+      contactReasonRequired: "Veuillez sélectionner une raison de contact",
+      messageMinLength: "Le message doit contenir au moins 10 caractères",
+      messageMaxLength: "Le message doit contenir moins de 200 caractères",
+      messageSentTitle: "Message Envoyé avec Succès",
+      messageSentDescription: "Merci de nous avoir contactés. Nous répondrons dans 3-5 jours ouvrables.",
+      errorTitle: "Erreur",
+      errorDescription: "Échec de l'envoi du message. Veuillez réessayer plus tard."
     },
     reasons: {
       general: "Demande Générale",
