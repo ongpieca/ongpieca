@@ -151,24 +151,23 @@ export default function DonationSection() {
               </div>
 
               <div className="space-y-4">
-                <Button
-                  type="submit"
-                  className="w-full bg-primary-green text-white p-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors"
+                <a 
+                  href="/contact"
+                  className="w-full bg-primary-green text-white p-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors block text-center"
                 >
-                  Donate and Support
-                </Button>
+                  Contact Us to Support Us
+                </a>
                 
                 <div className="text-center">
-                  <p className="text-gray-600 mb-4">Or pay with PayPal:</p>
-                  <div className="flex justify-center">
-                    <div className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg cursor-pointer transition-colors">
-                      <PayPalButton
-                        amount={getCurrentAmount().toString()}
-                        currency="USD"
-                        intent="CAPTURE"
-                      />
-                    </div>
+                  <p className="text-gray-600 mb-4 font-semibold">OR</p>
+                  <div className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg cursor-pointer transition-colors mx-auto w-fit">
+                    <PayPalButton
+                      amount={getCurrentAmount().toString()}
+                      currency="USD"
+                      intent="CAPTURE"
+                    />
                   </div>
+                  <p className="text-sm text-gray-600 mt-2">Pay with PayPal</p>
                 </div>
               </div>
             </form>
