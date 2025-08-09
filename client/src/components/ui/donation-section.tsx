@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Heart } from "lucide-react";
 import { Card, CardContent } from "./card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PayPalButton from "./paypal-button";
 
 export default function DonationSection() {
   const { t } = useLanguage();
@@ -149,12 +150,27 @@ export default function DonationSection() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-primary-green text-white p-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors"
-              >
-                Donate and Support
-              </Button>
+              <div className="space-y-4">
+                <Button
+                  type="submit"
+                  className="w-full bg-primary-green text-white p-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors"
+                >
+                  Donate and Support
+                </Button>
+                
+                <div className="text-center">
+                  <p className="text-gray-600 mb-4">Or pay with PayPal:</p>
+                  <div className="flex justify-center">
+                    <div className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg cursor-pointer transition-colors">
+                      <PayPalButton
+                        amount={getCurrentAmount().toString()}
+                        currency="USD"
+                        intent="CAPTURE"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </form>
           </CardContent>
         </Card>

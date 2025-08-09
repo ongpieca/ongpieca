@@ -48,6 +48,11 @@ Currently implements a **basic user management system** with username/password a
 - Drizzle ORM for type-safe database operations
 - Drizzle Kit for database migrations and schema management
 
+**Payment Integration:**
+- PayPal Server SDK for secure payment processing
+- PayPal Web SDK v6 for client-side payment integration
+- Support for both sandbox and production environments
+
 **Frontend Libraries:**
 - React 18 with TypeScript for component development
 - Wouter for lightweight routing
