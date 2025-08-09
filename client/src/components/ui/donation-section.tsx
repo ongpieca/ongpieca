@@ -87,7 +87,7 @@ export default function DonationSection() {
                         : 'border-gray-300 hover:border-primary-green hover:text-primary-green'
                     }`}
                   >
-                    {amount} XOF
+                    ${amount}
                   </button>
                 ))}
               </div>
@@ -95,13 +95,13 @@ export default function DonationSection() {
               <div className="relative">
                 <Input
                   type="number"
-                  placeholder="100"
+                  placeholder="50"
                   value={customAmount}
                   onChange={(e) => handleCustomAmountChange(e.target.value)}
                   className="w-full p-4 text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-primary-green pr-16"
                 />
                 <span className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black font-semibold">
-                  XOF
+                  USD
                 </span>
               </div>
 
