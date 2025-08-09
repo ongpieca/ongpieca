@@ -13,13 +13,27 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Try to get saved language from localStorage, default to 'en'
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('arpieca-language') as Language) || 'en';
+    }
+    return 'en';
+  });
   
   const t = translations[language];
   const isRTL = language === 'ar';
 
+  // Save language preference to localStorage whenever it changes
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('arpieca-language', lang);
+    }
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t, isRTL }}>
       <div dir={isRTL ? 'rtl' : 'ltr'} className={isRTL ? 'font-arabic' : ''}>
         {children}
       </div>
