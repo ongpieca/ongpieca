@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import directorImage from "@assets/Screenshot 2025-08-08 064141_1754626152013.png";
 import programDirectorImage from "@assets/Screenshot 2025-08-08 064329_1754626183111.png";
 import waterCoordinatorImage from "@assets/Screenshot 2025-08-08 123030_1754645463294.png";
-import outreachManagerImage from "@assets/Screenshot 2025-08-08 123510_1754645742341.png";
+import outreachManagerImage from "@assets/Screenshot 2025-08-09 100942_1754723417857.png";
 
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
