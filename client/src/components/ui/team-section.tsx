@@ -32,7 +32,7 @@ export default function TeamSection() {
       description: t.team.members.waterCoordinator.description
     },
     {
-      name: "Aisha Sarr",
+      name: "Mohammed Lamine Sarr",
       position: t.team.members.outreachManager.position,
       image: outreachManagerImage,
       description: t.team.members.outreachManager.description
