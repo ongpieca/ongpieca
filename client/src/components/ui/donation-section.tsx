@@ -34,18 +34,18 @@ export default function DonationSection() {
   };
 
   return (
-    <section id="donate" className="py-20 bg-light-gray">
+    <section id="donate" className="py-20 bg-light-gray dark:bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">
             {t.donation.title}
           </h2>
-          <p className="text-xl text-black">
+          <p className="text-xl text-black dark:text-gray-200">
             {t.donation.description}
           </p>
         </div>
 
-        <Card className="bg-white rounded-2xl shadow-xl max-w-2xl mx-auto animate-fade-in">
+        <Card className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl max-w-2xl mx-auto animate-fade-in">
           <CardContent className="p-8">
             <form className="space-y-6">
 

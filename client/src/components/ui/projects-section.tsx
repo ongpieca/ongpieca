@@ -58,11 +58,11 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white" ref={ref}>
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl lg:text-5xl font-black text-primary-green mb-6">{t.projects.title}</h2>
-          <p className="text-xl text-black max-w-3xl mx-auto">
+          <p className="text-xl text-black dark:text-gray-200 max-w-3xl mx-auto">
             {t.projects.description}
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className={`bg-light-gray rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all transform duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`bg-light-gray dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all transform duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{transitionDelay: `${index * 100}ms`}}
             >
               <img 
@@ -81,7 +81,7 @@ export default function ProjectsSection() {
               />
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-primary-green mb-3">{project.title}</h3>
-                <p className="text-black mb-4">{project.description}</p>
+                <p className="text-black dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex items-center text-accent-red font-semibold">
                   <span className="mr-2 text-2xl">{project.icon}</span>
                   {project.stat}

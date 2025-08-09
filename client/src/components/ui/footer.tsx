@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="bg-white border-t border-gray-200 py-16">
+    <footer id="contact" className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Logo Section */}
         <div className="text-center mb-12">
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="font-bold text-primary-green mb-4">{t.footer.quickLinks}</h3>
-            <ul className="space-y-2 text-black">
+            <ul className="space-y-2 text-black dark:text-gray-300">
               <li>
                 <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="hover:text-primary-green transition-colors">
                   Home
@@ -61,54 +61,54 @@ export default function Footer() {
           </div>
           
           <div>
-            <p className="text-black leading-relaxed">
+            <p className="text-black dark:text-gray-300 leading-relaxed">
               {t.footer.description}
             </p>
           </div>
           
           <div>
             <h3 className="font-bold text-primary-green mb-4">{t.footer.contactInfo}</h3>
-            <p className="text-black mb-4">
+            <p className="text-black dark:text-gray-300 mb-4">
               <a href="mailto:info@arpieca.org" className="hover:text-primary-green transition-colors">
                 info@arpieca.org
               </a>
             </p>
             
-            <h4 className="font-semibold text-black mb-3">{t.footer.followUs}</h4>
+            <h4 className="font-semibold text-black dark:text-gray-200 mb-3">{t.footer.followUs}</h4>
             <div className="flex space-x-3">
               <a 
                 href="https://www.facebook.com/ongarpieca.senegal/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 title="Follow us on Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a 
                 href="#" 
-                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 title="Follow us on Instagram"
               >
                 <Instagram size={20} />
               </a>
               <a 
                 href="#" 
-                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 title="Follow us on YouTube"
               >
                 <Youtube size={20} />
               </a>
               <a 
                 href="#" 
-                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 title="Follow us on Twitter"
               >
                 <Twitter size={20} />
               </a>
               <a 
                 href="#" 
-                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100"
+                className="text-primary-green hover:text-green-700 transition-colors p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
                 title="Follow us on LinkedIn"
               >
                 <Linkedin size={20} />
@@ -139,7 +139,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-black">
+        <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center text-black dark:text-gray-300">
           {t.footer.copyright}
         </div>
       </div>

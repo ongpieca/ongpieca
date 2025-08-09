@@ -3,6 +3,7 @@ import { Button } from "./button";
 import { Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./language-selector";
+import ThemeToggle from "./theme-toggle";
 import { Link } from "wouter";
 import arpiecaLogo from "@assets/240871454_588027879041722_576747084793897900_n (1)_1754632817174.png";
 
@@ -27,7 +28,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -41,16 +42,17 @@ export default function Navigation() {
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            <button onClick={() => scrollToSection('projects')} className="transition-colors hover:text-primary-green text-[#050505]">
+            <button onClick={() => scrollToSection('projects')} className="transition-colors hover:text-primary-green text-[#050505] dark:text-gray-200 dark:hover:text-primary-green">
               {t.nav.projects}
             </button>
-            <button onClick={() => scrollToSection('about')} className="transition-colors hover:text-primary-green text-[#000000]">
+            <button onClick={() => scrollToSection('about')} className="transition-colors hover:text-primary-green text-[#000000] dark:text-gray-200 dark:hover:text-primary-green">
               {t.nav.aboutUs}
             </button>
-            <a href="/contact" className="transition-colors hover:text-primary-green text-[#0a0a0a]">
+            <a href="/contact" className="transition-colors hover:text-primary-green text-[#0a0a0a] dark:text-gray-200 dark:hover:text-primary-green">
               {t.nav.contact}
             </a>
             <LanguageSelector />
+            <ThemeToggle />
           </div>
           <Button 
             onClick={() => scrollToSection('donate')}
