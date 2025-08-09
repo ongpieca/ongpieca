@@ -7,6 +7,7 @@ ARPIECA (Association pour la Renaissance du Patrimoine Islamique et de l'Expansi
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+UI/UX preferences: Light theme only (dark mode removed per user request)
 
 ## System Architecture
 
